@@ -16,26 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atb-nz-1tq">
-                                <rect key="frame" x="132" y="338" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="TweetButton"/>
-                                <connections>
-                                    <action selector="ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpO-3z-cdo"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfm-VZ-BL8">
+                                <rect key="frame" x="264" y="712" width="100" height="100"/>
+                                <state key="normal" image="manu"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfm-VZ-BL8" secondAttribute="trailing" constant="50" id="VCn-Uo-dXd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nfm-VZ-BL8" secondAttribute="bottom" constant="50" id="wQs-4n-FBE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="manuButton" destination="nfm-VZ-BL8" id="QDo-9J-3jp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="89"/>
+            <point key="canvasLocation" x="-128" y="88"/>
         </scene>
     </scenes>
     <resources>
-        <image name="TweetButton" width="150" height="150"/>
+        <image name="manu" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

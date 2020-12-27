@@ -15,6 +15,9 @@ class CustomButton: UIView {
     var deleteButton = UIButton()
     var tweetButton = UIButton()
     
+    let openImage = UIImage(named: "manuButton")
+    let closeImage = UIImage(named: "close")
+    
     var manuPosition: CGPoint!
     
     private var tapped: Bool = false
@@ -23,8 +26,8 @@ class CustomButton: UIView {
         
         let radian = angle * .pi / 180
         
-        let positionX = manuPosition.x + cos(radian) * radius
-        let positionY = manuPosition.y + sin(radian) * radius
+        let positionX = manuButton.center.x + cos(radian) * radius
+        let positionY = manuButton.center.y + sin(radian) * radius
         
         let position = CGPoint(x: positionX, y: positionY)
         
@@ -44,6 +47,9 @@ class CustomButton: UIView {
         deleteButton.layer.cornerRadius = 50
         tweetButton.layer.cornerRadius = 50
         
+        addButton.isHidden = false
+        deleteButton.isHidden = false
+        tweetButton.isHidden = false
         
         self.addSubview(addButton)
         self.addSubview(deleteButton)
@@ -52,37 +58,44 @@ class CustomButton: UIView {
     
     @objc func movementWhenManuButtonTapped() {
         
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
-            self.manuButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn, animations: {
+            self.manuButton.transform = CGAffineTransform(scaleX: 1.08, y: 1.08)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
             self.manuButton.transform = .identity
         }, completion: nil)
         
         if tapped == false {
-            print("出る")
+
             setButtonStatus()
-            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
                 self.addButton.layer.position = self.getButtonPositon(angle: -90, radius: 150)
                 self.deleteButton.layer.position = self.getButtonPositon(angle: -180, radius: 150)
                 self.tweetButton.layer.position = self.getButtonPositon(angle: -135, radius: 150)
                 print(self.addButton.layer.position)
             }, completion:{ [self]_ in
-                tapped = !tapped})
+                tapped = !tapped
+            })
+            self.manuButton.setImage(closeImage, for: .normal)
             
         } else {
             
-            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseOut, animations: {
-                print("閉じる")
-                self.addButton.layer.position = self.manuPosition
-                self.deleteButton.layer.position = self.manuPosition
-                self.tweetButton.layer.position = self.manuPosition
-                print(self.addButton.layer.position)
-            }, completion: { _ in
+            self.manuButton.setImage(self.openImage, for: .normal)
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+                
+                self.addButton.layer.position = self.manuButton.center
+                self.deleteButton.layer.position = self.manuButton.center
+                self.tweetButton.layer.position = self.manuButton.center
+                
+            }, completion: {_ in
+                
                 self.tapped = !self.tapped
+                self.addButton.isHidden = true
+                self.deleteButton.isHidden = true
+                self.tweetButton.isHidden = true
+
             })
-            
         }
     }
     

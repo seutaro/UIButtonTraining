@@ -29,26 +29,6 @@ class ViewController: UIViewController {
         
         self.manuButton.addTarget(customButton, action: #selector(customButton.movementWhenManuButtonTapped), for: .touchUpInside)
         self.view.addSubview(customButton)
+        
     }
-
-//    @IBAction func ButtonTapped(_ sender: UIButton) {
-//        animateView(sender)
-//    }
-//    
-//    
-//    func animateView(_ viewToAnimate:UIView) {
-//        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
-//            viewToAnimate.transform = CGAffineTransform(scaleX: 1.08, y: 1.08)
-//        }) { (_) in
-//            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: .curveEaseOut, animations: {
-//                viewToAnimate.transform = .identity
-//                
-//            }, completion: nil)
-//        }
-//    }
-    
-    
-    
-    
-    
 }

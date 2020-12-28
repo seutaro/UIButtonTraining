@@ -16,28 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfm-VZ-BL8">
-                                <rect key="frame" x="274" y="722" width="90" height="90"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-Sh-6WS" userLabel="addButton">
+                                <rect key="frame" x="279" y="727" width="100" height="100"/>
+                                <state key="normal" image="addButton"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Up9-Qk-RYB" userLabel="deleteButton">
+                                <rect key="frame" x="279" y="727" width="100" height="100"/>
+                                <state key="normal" image="deleteButton"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jhx-FE-yfu" userLabel="tweetButton">
+                                <rect key="frame" x="229" y="677" width="150" height="150"/>
+                                <state key="normal" image="TweetButton"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwV-vQ-W3U" userLabel="closeButton">
+                                <rect key="frame" x="289" y="737" width="90" height="90"/>
+                                <state key="normal" image="close"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-Fg-hlv" userLabel="manuButton">
+                                <rect key="frame" x="289" y="737" width="90" height="90"/>
                                 <state key="normal" image="manuButton"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfm-VZ-BL8" secondAttribute="trailing" constant="50" id="VCn-Uo-dXd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nfm-VZ-BL8" secondAttribute="bottom" constant="50" id="wQs-4n-FBE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Up9-Qk-RYB" secondAttribute="bottom" constant="35" id="7jn-Mh-e3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zwV-vQ-W3U" secondAttribute="bottom" constant="35" id="Cug-RB-Uns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UaG-Fg-hlv" secondAttribute="bottom" constant="35" id="FR5-TY-FW0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jhx-FE-yfu" secondAttribute="bottom" constant="35" id="Loi-2i-c3y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Up9-Qk-RYB" secondAttribute="trailing" constant="35" id="VQZ-0x-w6e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UaG-Fg-hlv" secondAttribute="trailing" constant="35" id="WSP-UI-6LM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nc3-Sh-6WS" secondAttribute="bottom" constant="35" id="ZEj-26-FRS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jhx-FE-yfu" secondAttribute="trailing" constant="35" id="c0a-3z-5Ik"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zwV-vQ-W3U" secondAttribute="trailing" constant="35" id="qWR-SI-mSl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nc3-Sh-6WS" secondAttribute="trailing" constant="35" id="wX4-T3-r1L"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="manuButton" destination="nfm-VZ-BL8" id="QDo-9J-3jp"/>
+                        <outlet property="addButton" destination="nc3-Sh-6WS" id="fuH-zO-2zX"/>
+                        <outlet property="closeButton" destination="zwV-vQ-W3U" id="7LY-bU-yFD"/>
+                        <outlet property="deleteButton" destination="Up9-Qk-RYB" id="1AP-P1-Ynz"/>
+                        <outlet property="manuButton" destination="UaG-Fg-hlv" id="r0J-km-ibq"/>
+                        <outlet property="tweetButton" destination="Jhx-FE-yfu" id="YZm-jD-Ihe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="88"/>
+            <point key="canvasLocation" x="-128.98550724637681" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TweetButton" width="150" height="150"/>
+        <image name="addButton" width="100" height="100"/>
+        <image name="close" width="90" height="90"/>
+        <image name="deleteButton" width="100" height="100"/>
         <image name="manuButton" width="90" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

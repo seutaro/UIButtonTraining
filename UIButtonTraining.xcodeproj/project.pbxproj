@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA9391B12597714400AEBA30 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9391B02597714400AEBA30 /* CustomButton.swift */; };
 		EAC8AF1F2595B92200F3BC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8AF1E2595B92200F3BC39 /* AppDelegate.swift */; };
 		EAC8AF212595B92200F3BC39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8AF202595B92200F3BC39 /* SceneDelegate.swift */; };
 		EAC8AF232595B92200F3BC39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8AF222595B92200F3BC39 /* ViewController.swift */; };
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA9391B02597714400AEBA30 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		EAC8AF1B2595B92200F3BC39 /* UIButtonTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIButtonTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC8AF1E2595B92200F3BC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC8AF202595B92200F3BC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				EAC8AF202595B92200F3BC39 /* SceneDelegate.swift */,
 				EAC8AF222595B92200F3BC39 /* ViewController.swift */,
 				EAC8AF242595B92200F3BC39 /* Main.storyboard */,
-				EA9391B02597714400AEBA30 /* CustomButton.swift */,
 				EAC8AF272595B92300F3BC39 /* Assets.xcassets */,
 				EAC8AF292595B92300F3BC39 /* LaunchScreen.storyboard */,
 				EAC8AF2C2595B92300F3BC39 /* Info.plist */,
@@ -261,7 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9391B12597714400AEBA30 /* CustomButton.swift in Sources */,
 				EAC8AF232595B92200F3BC39 /* ViewController.swift in Sources */,
 				EAC8AF1F2595B92200F3BC39 /* AppDelegate.swift in Sources */,
 				EAC8AF212595B92200F3BC39 /* SceneDelegate.swift in Sources */,

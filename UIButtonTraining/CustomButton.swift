@@ -39,6 +39,7 @@ class CustomButton: UIView {
         deleteButton.frame = CGRect(origin: manuPosition, size: CGSize(width: 100, height: 100))
         tweetButton.frame = CGRect(origin: manuPosition, size: CGSize(width: 100, height: 100))
         
+        addButton.addTarget(self, action: #selector(CustomButton.tapped(_:)), for: .touchUpInside)
         addButton.center = manuButton.center
         deleteButton.center = manuButton.center
         tweetButton.center = manuButton.center
@@ -97,6 +98,10 @@ class CustomButton: UIView {
 
             })
         }
+    }
+    
+    @objc func tapped(_ sender: UIButton) {
+        self.backgroundColor = UIColor.red
     }
     
 }
